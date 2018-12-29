@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light navbar-expand-lg bg-light navbar-static-top">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="../images/laravel.png" alt="laravel" style="margin-right: 15px;margin-top: -5px" width=35>
+            <img src="https://iocaffcdn.phphub.org/uploads/images/201812/29/28201/lx5FV8DOU1.png!large" alt="laravel" style="margin-right: 15px;margin-top: -5px" width=35>
             Larabbs
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,8 +27,8 @@
                             {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="">个人中心</a>
-                            <a class="dropdown-item" href="">编辑资料</a>
+                            <a class="dropdown-item" href="{{ route('users.show',Auth::id()) }}">个人中心</a>
+                            <a class="dropdown-item" href="{{ route('users.edit',Auth::id()) }}">编辑资料</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" id="logout" href="#">
                                 <form action="{{ route('logout') }}" method="POST">
