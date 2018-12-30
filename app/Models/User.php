@@ -28,4 +28,9 @@ class User extends Authenticatable implements  MustVerifyEmailContract
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    //关联关系 用户关联话题
+    public function topics(){
+        return $this->hasMany(Topic::class);
+    }
 }

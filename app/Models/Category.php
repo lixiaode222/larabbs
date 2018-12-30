@@ -10,4 +10,8 @@ class Category extends Model
         'name','description'
     ];
 
+    //关联关系
+    public function topics(){
+        return $this->hasMany(Topic::class);
+    }
 }
