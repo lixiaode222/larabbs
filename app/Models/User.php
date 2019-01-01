@@ -29,9 +29,14 @@ class User extends Authenticatable implements  MustVerifyEmailContract
         'password', 'remember_token',
     ];
 
-    //关联关系 用户关联话题
+    //模型关联 用户关联话题
     public function topics(){
         return $this->hasMany(Topic::class);
+    }
+
+    //模型关联 用户关联回复
+    public function replies(){
+        return $this->hasMany(Reply::class);
     }
 
     //权限
